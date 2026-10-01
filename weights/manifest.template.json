@@ -1,0 +1,20 @@
+{
+  "status": "template_no_weights_released",
+  "model_id": "NeuroPanel",
+  "release_revision": null,
+  "compatible_code_commit": null,
+  "checkpoint_type": null,
+  "required_base_model": null,
+  "license": null,
+  "artifacts": [],
+  "artifact_entry_fields": [
+    "role",
+    "filename",
+    "size_bytes",
+    "sha256",
+    "download_url",
+    "source_revision",
+    "license"
+  ],
+  "loading_verification": null
+}

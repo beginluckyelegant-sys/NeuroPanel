@@ -1,0 +1,24 @@
+{
+  "status": "template_not_runnable",
+  "experiment_scope": null,
+  "study_code_commit": null,
+  "model": {
+    "checkpoint": null,
+    "revision": null,
+    "sha256": null,
+    "tokenizer_revision": null,
+    "adapter": null,
+    "precision": null,
+    "context_limit": null
+  },
+  "agents": null,
+  "prompts": null,
+  "generation": null,
+  "retrieval": null,
+  "critic": null,
+  "refinement": null,
+  "voting": null,
+  "calibration": null,
+  "failure_policy": null,
+  "evaluation_protocol": null
+}

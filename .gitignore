@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+weights/
+checkpoints/
+private_data/
+patient_data/
+logs/
+outputs/
+*.safetensors
+*.gguf

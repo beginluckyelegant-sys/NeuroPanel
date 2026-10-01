@@ -1,0 +1,6 @@
+{
+  "example_type": "synthetic_format_only",
+  "case_id": "SYNTHETIC-001",
+  "case_text": "[Invented demographic information.] [Invented presenting complaint.] [Invented history, examination and investigations.]",
+  "contains_patient_data": false
+}
