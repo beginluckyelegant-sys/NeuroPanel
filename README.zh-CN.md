@@ -24,7 +24,7 @@ PYTHONPATH=src python3 -m neuropanel \
 
 演示使用固定的合成回复，完整走通检索、2 个 agent、critic、修正与投票，共 8 次模拟调用。得到的 Candidate A 只是测试标签，不代表临床诊断或模型表现。
 
-真实模型接入见[运行指南](docs/run_reference.md)：使用已有的 OpenAI 兼容服务，填写实际模型名及服务地址。此仓库不负责启动模型服务或加载权重。
+真实模型接入见[运行指南](docs/run_reference.md)：使用已有的 OpenAI 兼容服务，填写实际模型名及服务地址。
 
 ## 验证与边界
 
