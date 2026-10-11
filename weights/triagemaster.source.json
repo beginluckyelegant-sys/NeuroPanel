@@ -1,7 +1,6 @@
 {
   "model_distribution_name": "TriageMaster-70B",
   "repository_id": "mengxiangbin/clinic-research-TriageMaster-70B",
-  "repository_url": "https://huggingface.co/mengxiangbin/clinic-research-TriageMaster-70B",
   "revision": "8f14be5698e7bf534a1ed9ab3f0551c92f59b1a5",
   "inspected_date": "2026-10-11",
   "public": true,

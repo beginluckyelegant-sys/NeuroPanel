@@ -18,7 +18,7 @@ Outputs are `result.json` and `trace.json`. Choose a new output path for each ru
 
 ## Connect an existing model server
 
-1. Start or obtain access to an OpenAI-compatible chat-completions endpoint using your independently verified weights and serving configuration. This repository does not install a server or load model weights.
+1. Start or obtain access to an OpenAI-compatible chat-completions endpoint using your independently verified weights and serving configuration.
 For NeuroPanel inference, the serving endpoint should load the team’s fine-tuned checkpoint or the specified base model with its matching adapter. Record that artifact identity separately from the API model label.
 
 2. Copy `configs/reference.http.json` to a local run configuration. Set `backend.base_url` (ending in `/v1`) and `backend.model` to the exact served identifier. Review roles, decoding limits and critic/voting choices; supplied values are configurable demonstration settings.
@@ -47,4 +47,4 @@ In a separate copied configuration, set `mode` to `single`. This invokes only th
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-Tests cover bounded refinement and re-critique, single mode, strict output failure, retrieval exclusions/revision checks, vote deduplication/ties, and the HTTP adapter contract. Passing these tests is software validation with synthetic data, not clinical validation.
+Tests cover bounded refinement and re-critique, single mode, strict output failure, retrieval exclusions/revision checks, vote deduplication/ties, and the HTTP adapter contract. These tests validate software behavior with synthetic data.

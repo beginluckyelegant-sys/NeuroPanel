@@ -29,4 +29,4 @@ Retrieve the original model-loading code, full pipeline, configuration, prompts,
 7. Upload final weights and required loading artifacts with checksums; run an end-to-end check against those exact artifacts.
 8. Tag a verified release and cite the immutable version in the manuscript.
 
-A documentation check or smoke test does not validate clinical performance. If an essential artifact cannot be shared, describe the restriction and the remaining reproducibility limitation explicitly.
+Documentation checks and smoke tests cover software execution. Clinical evaluation uses the study adjudication workflow. If an essential artifact cannot be shared, describe the restriction and the remaining reproducibility limitation explicitly.

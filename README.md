@@ -24,7 +24,7 @@ PYTHONPATH=src python3 -m neuropanel \
   --output outputs/demo-run-001
 ```
 
-This is a deterministic synthetic demonstration. It exercises retrieval, two agents, critique, refinement, voting, and trace recording with mock responses. It does not run DeepSeek or validate clinical performance.
+This is a deterministic synthetic demonstration. It exercises retrieval, two agents, critique, refinement, voting, and trace recording with mock responses. The demonstration uses fixed synthetic responses.
 
 For a real model endpoint, see the [run guide](docs/run_reference.md). The HTTP adapter connects to an existing OpenAI-compatible server; model serving and weight loading are separate prerequisites.
 
@@ -69,7 +69,7 @@ PYTHONPATH=src python3 -m unittest discover -s tests -v
 
 Patient data, clinical run logs, and restricted retrieval resources are not included. See [data availability](docs/data_availability.md). Real-case traces may contain sensitive content and must remain outside public Git history.
 
-The separately prepared DeepSeek Q8_0 artifacts are upstream base-model parameters, not final NeuroPanel weights. Check [Releases](https://github.com/beginluckyelegant-sys/NeuroPanel/releases) for actual asset availability; the inference source release does not assert completion of the earlier weight-upload job.
+See [Releases](https://github.com/beginluckyelegant-sys/NeuroPanel/releases) for available model artifacts, source revisions, restoration instructions, and checksums.
 
 ## Citation, licensing and contributions
 

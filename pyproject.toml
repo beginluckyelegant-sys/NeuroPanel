@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "neuropanel-reference"
 version = "0.1.0"
-description = "Reconstructed research inference architecture; not original-trial software"
+description = "October 2026 reconstructed research inference architecture"
 requires-python = ">=3.10"
 dependencies = []
 

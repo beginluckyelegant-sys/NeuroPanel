@@ -8,7 +8,6 @@ NeuroPanel is the research team’s neurology-domain trained and fine-tuned mode
 | --- | --- |
 | System name | NeuroPanel |
 | Model distribution name | TriageMaster-70B (research-team supplied) |
-| Model homepage | [mengxiangbin/clinic-research-TriageMaster-70B](https://huggingface.co/mengxiangbin/clinic-research-TriageMaster-70B) |
 | Inspected Hugging Face revision | `8f14be5698e7bf534a1ed9ab3f0551c92f59b1a5` |
 | Model development | Neurology-focused training and fine-tuning by the research team (author-reported) |
 | Research task | Neurological diagnostic assistance |
@@ -18,13 +17,13 @@ NeuroPanel is the research team’s neurology-domain trained and fine-tuned mode
 | Tokenizer / adapters / quantization | Pending verification |
 | Trial code version and configuration | Pending verification |
 | Fine-tuned weight release | Public model homepage available; inspected revision contains `.gitattributes` and `README.md` only |
-| Separate base-model artifacts | Unsloth DeepSeek-R1-Distill-Llama-70B GGUF Q8_0 mirror |
+| Q8_0 artifact source | `unsloth/DeepSeek-R1-Distill-Llama-70B-GGUF` |
 
-The model-development description above is supplied by the research team. The fine-tuned checkpoint or adapter will be linked to its exact revision and checksums when supplied. The separately prepared Q8_0 files match the upstream Unsloth base-model hashes and are catalogued as base-model artifacts. Compression details, training records, calibration, and capability-retention results are tracked in their respective evidence records.
+The model-development description above is supplied by the research team. The fine-tuned checkpoint or adapter will be linked to its exact revision and checksums when supplied. The Q8_0 artifact inventory records its source revision, filenames, and SHA-256 checksums. Compression details, training records, calibration, and capability-retention results are tracked in their respective evidence records.
 
 ## Intended use
 
-Research inspection and, once the missing artifacts are supplied, reproduction of the associated model-level comparisons. This repository release is not a clinically validated diagnostic service.
+Research inspection and, once the missing artifacts are supplied, reproduction of the associated model-level comparisons. The documented validation scope covers synthetic software execution and the HTTP adapter contract.
 
 ## Inputs and outputs
 
