@@ -4,7 +4,7 @@
 
 [中文说明](README.zh-CN.md) · [Architecture](docs/inference_architecture.md) · [Run guide](docs/run_reference.md) · [Model card](MODEL_CARD.md)
 
-NeuroPanel is described by the research team as a model developed through neurology-focused training and fine-tuning from DeepSeek-R1-Distill-Llama-70B. This repository provides its reconstructed inference architecture. The model is listed on Hugging Face as [TriageMaster-70B](https://huggingface.co/mengxiangbin/clinic-research-TriageMaster-70B). Model provenance and checkpoint availability are recorded in the [model card](MODEL_CARD.md).
+NeuroPanel is described by the research team as a model developed through neurology-focused training and fine-tuning from DeepSeek-R1-Distill-Llama-70B. This repository provides its reconstructed inference architecture. Model provenance and checkpoint availability are recorded in the [model card](MODEL_CARD.md).
 
 ## Release status
 
