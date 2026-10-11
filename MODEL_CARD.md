@@ -21,7 +21,7 @@ Research inspection and, once the missing artifacts are supplied, reproduction o
 
 ## Inputs and outputs
 
-The available revision-stage comparator prompt requests an English case narrative and three output sections: most likely diagnosis, differential diagnosis, and diagnostic reasoning. The exact original-trial input and output contracts remain to be verified from the implementation. The synthetic example is a format demonstration only.
+The available revision-stage comparator prompt requests an English case narrative and three output sections: most likely diagnosis, differential diagnosis, and diagnostic reasoning. The exact original-trial input and output contracts remain to be verified from the implementation. The new reference runner has a separate four-section JSON contract, documented in docs/inference_architecture.md. Synthetic examples validate software mechanics only.
 
 ## Development and evaluation evidence
 
@@ -29,7 +29,7 @@ Training provenance, dataset overlap checks, final model selection, environment,
 
 ## Limitations
 
-Weights, executable pipeline, original agent prompts, and verified run instructions are not yet available. The available comparator prompt cannot reproduce the complete intervention. Clinical correctness requires the study's expert adjudication process; exact text matching alone does not establish diagnostic equivalence.
+A reconstructed executable pipeline and synthetic run instructions are now available. Original-trial pipeline identity, final weights, and historical agent prompts remain unverified. The available comparator prompt cannot reproduce the complete intervention. Clinical correctness requires the study's expert adjudication process; exact text matching alone does not establish diagnostic equivalence.
 
 ## Access and licensing
 

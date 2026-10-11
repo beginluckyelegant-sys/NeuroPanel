@@ -10,8 +10,10 @@
 - [ ] Verify retrieval, critique, refinement, voting, and failure policies.
 - [ ] Add actual calibration evidence or document its absence/limitations.
 - [ ] Add primary comparison and clinical adjudication/evaluation code.
-- [ ] Pin dependencies and validate installation in a clean environment.
-- [ ] Run a verified synthetic example and document input/output contracts.
+- [x] Provide a standard-library reference runtime and tested source-run commands.
+- [ ] Pin and validate the historical serving environment.
+- [x] Run a synthetic reference example and document its input/output contracts.
+- [ ] Verify the actual model endpoint and original-trial behavior.
 - [ ] Confirm software and model licenses and restricted-data access wording.
 - [ ] Upload final model parameters and required loading artifacts.
 - [ ] Fill the artifact manifest and verify published checksums and loading.

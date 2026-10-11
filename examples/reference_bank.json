@@ -1,0 +1,12 @@
+[
+  {
+    "case_id": "DEMO-001",
+    "case_text": "Synthetic demonstration only: choose between arbitrary Candidate A and Candidate B labels.",
+    "embedding": [
+      0.9,
+      0.1
+    ],
+    "embedding_revision": "synthetic-vectors-v1",
+    "example_output": "Candidate A is the synthetic label."
+  }
+]

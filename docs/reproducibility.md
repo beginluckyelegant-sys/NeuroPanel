@@ -2,7 +2,7 @@
 
 ## Status
 
-This release supplies documentation and templates. It does not yet support installation, inference, or reproduction of the primary comparisons.
+This release includes a newly reconstructed reference architecture with a tested synthetic demonstration and an HTTP model adapter. See [run guide](run_reference.md). It does not yet reproduce the primary study comparisons or establish original-trial implementation identity.
 
 ## Establish the study version
 

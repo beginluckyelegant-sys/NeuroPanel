@@ -1,5 +1,5 @@
-# Synthetic format example
+# Synthetic examples
 
-`synthetic_case.json` contains invented placeholder text and demonstrates file structure only. It is not a clinical case, benchmark item, expected diagnosis, or tested NeuroPanel input contract. The input adapter and actual schema remain to be confirmed when the implementation is imported.
+`reference_case.json` and `reference_bank.json` are hand-authored software fixtures containing no patient data. `reference_expected.json` is the executed mock run result. The fixture deliberately exercises critique and one refinement per agent and reports the unresolved final critic issue.
 
-No expected clinical output is supplied. Replace or supplement this example with a verified synthetic end-to-end example after the runner is available.
+`synthetic_case.json` is the earlier format-only placeholder. None of these files is a clinical benchmark or an embedding-model validation dataset. See the [run guide](../docs/run_reference.md).

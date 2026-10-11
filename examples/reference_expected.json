@@ -1,0 +1,26 @@
+{
+  "selected_diagnosis": "candidate a",
+  "ranking": [
+    {
+      "diagnosis": "candidate a",
+      "hard_votes": 2,
+      "soft_sum": 1.4,
+      "vote_score": 2.7,
+      "mean_self_reported_score": 0.7
+    },
+    {
+      "diagnosis": "candidate b",
+      "hard_votes": 2,
+      "soft_sum": 0.6,
+      "vote_score": 2.3,
+      "mean_self_reported_score": 0.3
+    }
+  ],
+  "score_semantics": "uncalibrated_model_self_report; not a correctness probability",
+  "agent_count": 2,
+  "provenance": "reconstructed_reference_not_original_trial",
+  "mode": "full",
+  "backend": "mock",
+  "call_count": 8,
+  "unresolved_critic_issues": true
+}

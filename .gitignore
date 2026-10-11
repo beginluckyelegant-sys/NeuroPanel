@@ -7,7 +7,6 @@ __pycache__/
 !.env.example
 *.pem
 *.key
-weights/
 checkpoints/
 private_data/
 patient_data/
@@ -15,3 +14,7 @@ logs/
 outputs/
 *.safetensors
 *.gguf
+
+*.egg-info/
+build/
+dist/

@@ -1,7 +1,3 @@
-# Study implementation
+# Reference inference source
 
-Reserved for the verified NeuroPanel source code. No inference implementation has been released yet.
-
-The source import must identify the original study version and include model loading, input assembly, retrieval, agents, critique, refinement, voting, and output rendering wherever these are supported by the actual implementation. Reconstructed components must be explicitly labeled.
-
-Dependencies and executable commands will be documented only after the imported implementation is tested.
+`neuropanel/` contains the runnable, newly reconstructed reference architecture. See [architecture](../docs/inference_architecture.md) and [run guide](../docs/run_reference.md). Original-trial source has not been recovered or verified.

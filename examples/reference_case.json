@@ -1,0 +1,13 @@
+{
+  "case_id": "SYNTHETIC-001",
+  "case_text": "Synthetic software fixture. Candidate A and Candidate B are arbitrary labels, not diagnoses. No patient data are supplied.",
+  "embedding": [
+    1.0,
+    0.0
+  ],
+  "embedding_revision": "synthetic-vectors-v1",
+  "candidate_diagnoses": [
+    "Candidate A",
+    "Candidate B"
+  ]
+}

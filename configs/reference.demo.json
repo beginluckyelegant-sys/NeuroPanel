@@ -1,0 +1,63 @@
+{
+  "provenance": "reconstructed_reference_not_original_trial",
+  "mode": "full",
+  "seed": 42,
+  "backend": {
+    "kind": "mock",
+    "base_url": "http://127.0.0.1:8002/v1",
+    "model": "REPLACE_WITH_SERVED_MODEL_ID",
+    "api_key_env": "NEUROPANEL_API_KEY",
+    "timeout_seconds": 120,
+    "max_retries": 0
+  },
+  "agents": [
+    {
+      "id": "evidence",
+      "role": "Summarize supporting and conflicting evidence",
+      "ordering": "forward",
+      "generation": {
+        "temperature": 0.3,
+        "top_p": 0.95,
+        "max_tokens": 1024
+      }
+    },
+    {
+      "id": "alternatives",
+      "role": "Consider alternative explanations and missing evidence",
+      "ordering": "reverse",
+      "generation": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_tokens": 1024
+      }
+    }
+  ],
+  "retrieval": {
+    "enabled": true,
+    "embedding_revision": "synthetic-vectors-v1",
+    "top_k": 1,
+    "min_similarity": 0.0,
+    "excluded_case_ids": []
+  },
+  "critic": {
+    "generation": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 512
+    },
+    "section_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "penalty_weight": 0.5,
+    "minimum_reward": 0.8,
+    "max_refinements": 1
+  },
+  "voting": {
+    "top_k": 3,
+    "soft_weight": 0.5,
+    "aliases": {}
+  }
+}

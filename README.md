@@ -1,63 +1,74 @@
 # NeuroPanel
 
-**Research repository for neurology-domain language-model assistance in physician diagnosis.**
+**Research inference architecture for neurology-domain language-model assistance.**
 
-[中文说明](README.zh-CN.md) · [Reproducibility guide](docs/reproducibility.md) · [Model card](MODEL_CARD.md) · [Release checklist](docs/release_checklist.md)
+[中文说明](README.zh-CN.md) · [Architecture](docs/inference_architecture.md) · [Run guide](docs/run_reference.md) · [Model card](MODEL_CARD.md)
 
-## Overview
+## Release status
 
-NeuroPanel is the research system described in the manuscript *Neurology-domain large language model assistance for physician diagnosis: a randomized controlled trial*. This repository is being assembled to document the study implementation and support reproducibility of the model-level comparisons.
+This repository now includes a **runnable reconstructed reference implementation** of the retrieval → multi-agent generation → critique → refinement → voting architecture described in Supplement 3 of *Neurology-domain large language model assistance for physician diagnosis: a randomized controlled trial*.
 
-## Current availability
+**The reference implementation was newly written in October 2026. It is not authenticated original-trial code and has not reproduced the primary study results.** Example roles, prompts, thresholds, and decoding settings are explicitly labeled reference choices. The original study configuration, final checkpoint, calibration evidence, and clinical evaluation materials remain pending.
 
-| Component | Status |
-| --- | --- |
-| Repository documentation and contribution guidance | Available |
-| Configuration and weight-manifest templates | Available; unfilled, not executable |
-| Revision-stage single-model comparator prompt | Available with provenance |
-| Original study pipeline and agent prompts | Pending source-code reconciliation |
-| Inference and evaluation programs | Pending |
-| Environment lockfile and verified installation commands | Pending implementation |
-| Calibration implementation and results | Pending verification |
-| Model weights, adapters, and tokenizer artifacts | Deferred to the final release stage |
-| Validated reproduction run or stable hosted interface | Not currently available |
+## Quick start — no model or credentials required
 
-**This is a documentation release, not a runnable model release.** No performance claims are established by these repository materials. There are no installation or inference commands yet because the original implementation and dependencies have not been imported and verified.
+Python 3.10+, from this repository root:
 
-## Repository map
-
-```text
-configs/          Configuration template; unknown fields remain null
-prompts/          Available prompt and experiment-specific provenance
-src/              Reserved location for the verified study implementation
-evaluation/       Evaluation requirements and adjudication boundaries
-examples/         Synthetic format example, not a clinical benchmark
-weights/          Final-stage artifact manifest and release instructions
-docs/             Reproduction, data access, and release documentation
-MODEL_CARD.md     Model identity, availability, intended use, and limitations
+```sh
+PYTHONPATH=src python3 -m neuropanel \
+  --config configs/reference.demo.json \
+  --case examples/reference_case.json \
+  --bank examples/reference_bank.json \
+  --output outputs/demo-run-001
 ```
 
-## Getting started
+This is a deterministic synthetic demonstration. It exercises retrieval, two agents, critique, refinement, voting, and trace recording with mock responses. It does not run DeepSeek or validate clinical performance.
 
-1. Read the [reproducibility guide](docs/reproducibility.md) and [model card](MODEL_CARD.md).
-2. Check the [release checklist](docs/release_checklist.md) for outstanding artifacts.
-3. Use templates only to collect verified study settings. A `null` value means unknown, not a recommended default.
-4. Once the original implementation is added, the README will provide tested setup and execution commands. Weights will be added in the final stage with version identifiers and checksums.
+For a real model endpoint, see the [run guide](docs/run_reference.md). The HTTP adapter connects to an existing OpenAI-compatible server; model serving and weight loading are separate prerequisites.
 
-## Version identity
+## Architecture
 
-Original-trial materials and revision-stage comparator experiments must remain distinguishable. A base-model comparator is not the complete NeuroPanel intervention. Newly reconstructed code must be labeled as such and must not silently replace the historical study implementation.
+```mermaid
+flowchart LR
+    I[Case + config] --> R[Optional cosine retrieval]
+    R --> A[Role-diverse agents]
+    A --> C[Tied critic]
+    C --> F[Bounded refinement]
+    F --> C
+    C --> V[Hard + soft vote]
+    V --> O[Result + audit trace]
+```
 
-## Data and model access
+See the [detailed architecture](docs/inference_architecture.md) for schemas, equations, tie/duplicate handling, exclusions, failure behavior, and the distinction between manuscript descriptions and new engineering choices.
 
-See [data availability](docs/data_availability.md) and [weight release instructions](weights/README.md). Patient-level data and private run logs are not part of this release. No access service or response deadline is promised at this stage.
+## Contents
 
-## Citation and license
+| Location | Contents |
+| --- | --- |
+| `src/neuropanel/` | Controller, HTTP/mock backends, retrieval, schemas, voting, CLI |
+| `prompts/reference/` | Newly written generation, critic, and refinement prompts |
+| `prompts/revision_single_model_comparator.txt` | Preserved comparator prompt, separate from reference runner |
+| `configs/reference.*.json` | Runnable synthetic and HTTP examples; not trial settings |
+| `configs/study.template.json` | Unknown historical settings remain null |
+| `examples/` | Synthetic inputs, demonstration bank, expected result |
+| `tests/` | Synthetic behavioral and HTTP contract tests |
+| `docs/` | Architecture, run guide, data availability, reproducibility and release checklist |
+| `weights/` | Artifact release instructions and manifest template |
 
-Bibliographic metadata will be finalized when the manuscript reference is confirmed; no publication DOI or publication status is asserted here. In the interim, refer to this repository URL and the exact commit you used.
+## Verification and limitations
 
-A software license has not yet been selected by the rights holders. Public visibility does not itself grant an open-source license. Third-party model and dependency terms remain applicable.
+The offline pipeline and local HTTP contract tests have been executed. A real model-server run and clinical adjudication are not verified by this release. Scores are explicitly uncalibrated model self-reports. Retrieval filters do not establish complete training/test independence. The single-agent control is not automatically budget matched to the full workflow.
 
-## Contributions
+```sh
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Research software; not validated here for use in patient care.
+## Data and model availability
+
+Patient data, clinical run logs, and restricted retrieval resources are not included. See [data availability](docs/data_availability.md). Real-case traces may contain sensitive content and must remain outside public Git history.
+
+The separately prepared DeepSeek Q8_0 artifacts are upstream base-model parameters, not final NeuroPanel weights. Check [Releases](https://github.com/beginluckyelegant-sys/NeuroPanel/releases) for actual asset availability; the inference source release does not assert completion of the earlier weight-upload job.
+
+## Citation, licensing and contributions
+
+Formal manuscript citation metadata and software licensing remain pending rights-holder confirmation. Until a license is selected, repository visibility does not itself grant an open-source license. Third-party model terms remain applicable. Cite the repository URL and exact commit when referencing these materials. See [CONTRIBUTING.md](CONTRIBUTING.md).
