@@ -1,5 +1,11 @@
 # Changelog
 
+## Model description update — 2026-10-11
+
+- Added the research team’s description of NeuroPanel as a neurology-domain trained and fine-tuned model.
+- Separated the fine-tuned checkpoint inventory from the upstream DeepSeek Q8_0 base-model mirror.
+
+
 ## Reconstructed reference inference — 2026-10-11
 
 - Added executable retrieval, agent, critic/refinement, voting, and single-control modules.

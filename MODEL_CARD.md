@@ -1,19 +1,23 @@
 # NeuroPanel model card
 
+NeuroPanel is the research team’s neurology-domain trained and fine-tuned model, developed from DeepSeek-R1-Distill-Llama-70B according to the authors’ model description. The October 2026 source release provides a reconstructed inference architecture for this model.
+
 ## Identity and provenance
 
 | Field | Current record |
 | --- | --- |
 | System name | NeuroPanel |
+| Model development | Neurology-focused training and fine-tuning by the research team (author-reported) |
 | Research task | Neurological diagnostic assistance |
 | Base model reported in manuscript | DeepSeek-R1-Distill-Llama-70B |
 | Final checkpoint / revision / checksum | Pending verification |
 | Final architecture and parameter count | Pending implementation and checkpoint verification |
 | Tokenizer / adapters / quantization | Pending verification |
 | Trial code version and configuration | Pending verification |
-| Weight release | Planned for the final stage; files not yet provided |
+| Fine-tuned weight release | Checkpoint or adapter location and artifact identifiers to be supplied |
+| Separate base-model artifacts | Unsloth DeepSeek-R1-Distill-Llama-70B GGUF Q8_0 mirror |
 
-The base model name is manuscript-reported provenance, not proof of the identity of a released checkpoint. Compression, training, calibration, and capability-retention claims require supporting implementation and records before inclusion as verified facts.
+The model-development description above is supplied by the research team. The fine-tuned checkpoint or adapter will be linked to its exact revision and checksums when supplied. The separately prepared Q8_0 files match the upstream Unsloth base-model hashes and are catalogued as base-model artifacts. Compression details, training records, calibration, and capability-retention results are tracked in their respective evidence records.
 
 ## Intended use
 

@@ -1,6 +1,6 @@
 # NeuroPanel
 
-神经科语言模型研究的推理架构与复现材料。
+NeuroPanel 是团队基于 DeepSeek-R1-Distill-Llama-70B 进行神经科定向训练与微调的模型。本仓库提供其推理架构与复现材料。
 
 [English](README.md) · [架构详解](docs/inference_architecture.md) · [运行指南](docs/run_reference.md)
 

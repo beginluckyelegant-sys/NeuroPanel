@@ -1,6 +1,8 @@
-# Model artifacts — final release stage
+# Model artifacts — NeuroPanel fine-tuned model and base-model mirror
 
-Model parameters will be supplied after the code, prompts, configuration, and evaluation materials have been reconciled. This directory currently contains only a manifest template.
+NeuroPanel is described by the research team as a neurology-domain trained and fine-tuned model derived from DeepSeek-R1-Distill-Llama-70B. Its checkpoint or adapter location, revision, and hashes will be entered in the manifest when supplied. This directory currently contains a manifest template.
+
+The separately prepared DeepSeek GGUF Q8_0 mirror preserves the upstream base-model files byte-for-byte. It is catalogued separately from the team’s fine-tuned checkpoint. If the model is distributed as a LoRA adapter, reproduction requires both the specified base checkpoint and the matching adapter.
 
 For each required checkpoint shard, adapter, tokenizer, architecture configuration, or custom loading file, record its artifact role, exact filename, byte size, SHA-256 checksum, immutable source revision, download location, and applicable license. State whether the release is a full checkpoint or requires a separately obtained base model.
 
