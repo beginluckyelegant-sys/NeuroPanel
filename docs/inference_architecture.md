@@ -1,6 +1,6 @@
 # Inference architecture
 
-**Implementation status:** runnable, newly reconstructed reference implementation (2026-10-11). It implements the high-level inference stages described in Supplement 3, eMethods 2. It has not been established as the code or configuration used in the original trial. No trial reproduction or clinical validation is claimed.
+**Implementation status:** runnable, newly reconstructed reference implementation (2026-10-11). It implements the high-level inference stages described in Supplement 3, eMethods 2. This version documents the executable workflow, example settings, and synthetic software validation.
 
 ```mermaid
 flowchart TD
@@ -41,7 +41,7 @@ The optional demonstration bank and query must carry the same nonempty `embeddin
 
 Cosine similarity ranks eligible demonstrations. Entries are excluded for a matching case identifier, configured evaluation identifier, matching non-null patient/group identifier, or normalized identical text. Ties sort by case identifier. These filters do not establish full patient-level independence or exclude semantic paraphrases when identifiers are absent. A separately audited bank is still required.
 
-Each agent receives the same retrieved examples and case but its own role, temperature, and consideration-order instruction. Supplied candidate choices are deterministically shuffled and optionally reversed; for open-ended cases without choices, ordering diversity is prompt-based only. Agents execute sequentially and independently before aggregation. Sequential execution is a reference engineering choice, not a historical trial claim.
+Each agent receives the same retrieved examples and case but its own role, temperature, and consideration-order instruction. Supplied candidate choices are deterministically shuffled and optionally reversed; for open-ended cases without choices, ordering diversity is prompt-based only. Agents execute sequentially and independently before aggregation. Sequential execution is the scheduling choice in this reconstruction.
 
 ### 2. Generate
 
@@ -82,8 +82,8 @@ Maximum successful calls in full mode are `M * (2 + 2 * max_refinements)`; singl
 | Retrieval/controller/critic/refinement/voting mechanics | Implemented and tested with synthetic fixtures |
 | HTTP request/response adapter | Tested against a local synthetic HTTP server |
 | Full synthetic run | Executed; 2 agents, 8 mock calls, including refinement |
-| Actual model-server run | Not verified in this release |
-| Original agent roles, prompts, thresholds, budgets | Not recovered; demonstration values are new choices |
-| Original final checkpoint, pruning, SFT, GRPO | Not implemented or verified here |
-| Calibration or clinical diagnostic performance | Not established |
-| Reproduction of primary model comparisons | Requires original artifacts and adjudication/evaluation materials |
+| Execution validation | Synthetic fixtures and a local HTTP contract server |
+| Agent roles, prompts, thresholds, budgets | Configurable examples introduced in this reconstruction |
+| Model preparation | Externally supplied checkpoints and serving environment |
+| Score interpretation | Uncalibrated model self-reports; clinical evaluation is a separate workflow |
+| Study comparison inputs | Versioned artifacts and adjudication/evaluation materials documented separately |

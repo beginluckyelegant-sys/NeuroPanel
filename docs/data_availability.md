@@ -4,7 +4,7 @@
 | --- | --- |
 | Documentation, templates, synthetic format example | In this repository |
 | Revision comparator prompt | In this repository; see provenance |
-| Reconstructed reference source and prompts | Available; not original-trial code |
+| Reconstructed reference source and prompts | Available; October 2026 reconstruction |
 | Original study source and full prompts | Pending |
 | Model weights, adapters, tokenizer | Final-stage release planned; not yet available |
 | Retrieval corpus and index | Sharing scope pending |

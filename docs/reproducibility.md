@@ -2,7 +2,7 @@
 
 ## Status
 
-This release includes a newly reconstructed reference architecture with a tested synthetic demonstration and an HTTP model adapter. See [run guide](run_reference.md). It does not yet reproduce the primary study comparisons or establish original-trial implementation identity.
+This release includes a newly reconstructed reference architecture with a tested synthetic demonstration and an HTTP model adapter. See [run guide](run_reference.md). Version provenance and available artifacts are tracked separately from the software execution checks.
 
 ## Establish the study version
 

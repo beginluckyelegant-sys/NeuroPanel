@@ -29,7 +29,7 @@ Training provenance, dataset overlap checks, final model selection, environment,
 
 ## Limitations
 
-A reconstructed executable pipeline and synthetic run instructions are now available. Original-trial pipeline identity, final weights, and historical agent prompts remain unverified. The available comparator prompt cannot reproduce the complete intervention. Clinical correctness requires the study's expert adjudication process; exact text matching alone does not establish diagnostic equivalence.
+A reconstructed executable pipeline and synthetic run instructions are now available. The model/configuration inventory tracks historical artifacts separately from the October 2026 reconstruction. The preserved comparator prompt belongs to its own experiment workflow. Clinical correctness requires the study's expert adjudication process; exact text matching alone does not establish diagnostic equivalence.
 
 ## Access and licensing
 

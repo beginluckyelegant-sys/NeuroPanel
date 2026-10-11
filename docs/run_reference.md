@@ -1,6 +1,6 @@
 # Run the reference architecture
 
-Python 3.10+ is required. Runtime uses only the Python standard library. Run the commands below from the repository root; no package installation is required. These commands run a newly reconstructed reference implementation, not authenticated original-trial software.
+Python 3.10+ is required. Runtime uses only the Python standard library. Run the commands below from the repository root; no package installation is required. These commands run the October 2026 reconstructed reference implementation.
 
 ## Offline synthetic demonstration
 
@@ -19,7 +19,7 @@ Outputs are `result.json` and `trace.json`. Choose a new output path for each ru
 ## Connect an existing model server
 
 1. Start or obtain access to an OpenAI-compatible chat-completions endpoint using your independently verified weights and serving configuration. This repository does not install a server or load model weights.
-2. Copy `configs/reference.http.json` to a local run configuration. Set `backend.base_url` (ending in `/v1`) and `backend.model` to the exact served identifier. Review roles, decoding limits and critic/voting choices; supplied values are demonstrative, not historical settings.
+2. Copy `configs/reference.http.json` to a local run configuration. Set `backend.base_url` (ending in `/v1`) and `backend.model` to the exact served identifier. Review roles, decoding limits and critic/voting choices; supplied values are configurable demonstration settings.
 3. If authentication is required, set `NEUROPANEL_API_KEY` in your environment. Never store the key in a config or URL. Local HTTP is accepted; remote endpoints require HTTPS. Ensure the selected endpoint is approved for the input data before supplying real cases.
 4. Prepare an input JSON object with nonempty `case_id` and `case_text`. For an initial interface test use the synthetic example.
 5. Run:

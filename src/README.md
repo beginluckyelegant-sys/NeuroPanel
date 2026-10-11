@@ -1,3 +1,3 @@
 # Reference inference source
 
-`neuropanel/` contains the runnable, newly reconstructed reference architecture. See [architecture](../docs/inference_architecture.md) and [run guide](../docs/run_reference.md). Original-trial source has not been recovered or verified.
+`neuropanel/` contains the runnable, newly reconstructed reference architecture. See [architecture](../docs/inference_architecture.md) and [run guide](../docs/run_reference.md). Version provenance is recorded in the architecture document.

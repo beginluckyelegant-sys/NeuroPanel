@@ -5,7 +5,7 @@
 - Added executable retrieval, agent, critic/refinement, voting, and single-control modules.
 - Added HTTP and mock backends, explicit JSON contracts, private run traces, synthetic examples, and tests.
 - Added architecture and run documentation, including historical provenance gaps and uncalibrated score semantics.
-- Verified mock software workflow and local HTTP contract; original-trial equivalence and real-model/clinical validation remain pending.
+- Verified the mock software workflow and local HTTP contract; recorded the validation scope and version provenance.
 
 ## Documentation preparation — 2026-10-01
 

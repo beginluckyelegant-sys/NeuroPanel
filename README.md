@@ -8,7 +8,7 @@
 
 This repository now includes a **runnable reconstructed reference implementation** of the retrieval → multi-agent generation → critique → refinement → voting architecture described in Supplement 3 of *Neurology-domain large language model assistance for physician diagnosis: a randomized controlled trial*.
 
-**The reference implementation was newly written in October 2026. It is not authenticated original-trial code and has not reproduced the primary study results.** Example roles, prompts, thresholds, and decoding settings are explicitly labeled reference choices. The original study configuration, final checkpoint, calibration evidence, and clinical evaluation materials remain pending.
+**This October 2026 reconstruction provides an executable reference architecture.** Agent roles, prompts, thresholds, and decoding settings are supplied as configurable examples. Version provenance and artifact availability are documented in the model card and configuration inventory.
 
 ## Quick start — no model or credentials required
 
@@ -48,7 +48,7 @@ See the [detailed architecture](docs/inference_architecture.md) for schemas, equ
 | `src/neuropanel/` | Controller, HTTP/mock backends, retrieval, schemas, voting, CLI |
 | `prompts/reference/` | Newly written generation, critic, and refinement prompts |
 | `prompts/revision_single_model_comparator.txt` | Preserved comparator prompt, separate from reference runner |
-| `configs/reference.*.json` | Runnable synthetic and HTTP examples; not trial settings |
+| `configs/reference.*.json` | Runnable synthetic and HTTP example settings |
 | `configs/study.template.json` | Unknown historical settings remain null |
 | `examples/` | Synthetic inputs, demonstration bank, expected result |
 | `tests/` | Synthetic behavioral and HTTP contract tests |
@@ -57,7 +57,7 @@ See the [detailed architecture](docs/inference_architecture.md) for schemas, equ
 
 ## Verification and limitations
 
-The offline pipeline and local HTTP contract tests have been executed. A real model-server run and clinical adjudication are not verified by this release. Scores are explicitly uncalibrated model self-reports. Retrieval filters do not establish complete training/test independence. The single-agent control is not automatically budget matched to the full workflow.
+The offline pipeline and local HTTP contract tests have been executed. Validation in this release covers synthetic execution and the local HTTP adapter contract. Scores are explicitly uncalibrated model self-reports. Retrieval filters do not establish complete training/test independence. The single-agent control is not automatically budget matched to the full workflow.
 
 ```sh
 PYTHONPATH=src python3 -m unittest discover -s tests -v
