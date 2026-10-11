@@ -9,3 +9,7 @@ For each required checkpoint shard, adapter, tokenizer, architecture configurati
 Choose a distribution mechanism suitable for the final artifact sizes; the manifest may reference externally hosted immutable artifacts. Do not commit large weights into ordinary Git history by default. No destination or completed upload is asserted here.
 
 Before release, verify checksums and loading against the published files, fill the manifest, and record the code commit and configuration used for the end-to-end test. `manifest.template.json` is not a completed manifest.
+
+## TriageMaster-70B model homepage
+
+[Public repository](https://huggingface.co/mengxiangbin/clinic-research-TriageMaster-70B), inspected at revision `8f14be5698e7bf534a1ed9ab3f0551c92f59b1a5` on 2026-10-11. The file inventory contains `.gitattributes` and `README.md`; model binaries and loading configuration are to be added. The machine-readable [source inventory](triagemaster.source.json) records what was actually available.
