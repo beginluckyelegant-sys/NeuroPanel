@@ -1,6 +1,6 @@
 # NeuroPanel-70B QLoRA run — 2026-11-14
 
-Status: **formal_training**. This is a new public-data adaptation run. Clinical validation has not been performed.
+Status: **training_completed_release_pending**. This is a new public-data adaptation run. Clinical validation has not been performed.
 
 ## Model and data
 
@@ -19,3 +19,7 @@ NF4 QLoRA, BF16 compute, LoRA rank 8 / alpha 16 / dropout 0.05 on q/k/v/o and ga
 `train.py` uses TRL SFTTrainer with completion-only loss. It expects `configs/qlora.json`, `data/train.jsonl`, `data/validation.jsonl`, and a verified `audit/model_manifest.json` under its parent project directory; place it in `scripts/`. Inputs contain prompt/completion chat arrays. Model loading is local-only. The prepared datasets are stored on the research Spark, with hashes recorded here; they are not bundled in this repository. `prepare_data.py` records the original workspace preparation layout and requires the preceding source download batches and local evaluation manifests. It is a run record, not a standalone source-data downloader.
 
 After dependencies and verified base weights are available: `python scripts/train.py --smoke`, followed by `python scripts/train.py`. The scripts refuse to overwrite a completed adapter directory. Training metrics, model hashes and the adapter release are added after successful completion.
+
+## Artifacts
+
+[Download the completed adapter and verification metadata](https://github.com/beginluckyelegant-sys/NeuroPanel/releases/tag/v0.2.0-qlora-20261114). See metrics.json for measured baseline/final validation loss; this run does not establish clinical effectiveness.

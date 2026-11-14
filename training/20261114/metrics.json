@@ -1,0 +1,40 @@
+{
+  "phase": "formal",
+  "trainable_parameters": 103546880,
+  "baseline_validation": {
+    "eval_loss": 8.392892837524414,
+    "eval_model_preparation_time": 0.0298,
+    "eval_runtime": 51.1563,
+    "eval_samples_per_second": 1.251,
+    "eval_steps_per_second": 1.251,
+    "eval_entropy": 1.6963279023766518,
+    "eval_mean_token_accuracy": 0.39037603233009577,
+    "eval_num_tokens": 0.0,
+    "epoch": 0
+  },
+  "training": {
+    "train_runtime": 13731.3241,
+    "train_samples_per_second": 0.311,
+    "train_steps_per_second": 0.039,
+    "total_flos": 1.9255769454742733e+17,
+    "train_loss": 0.9131153544292467,
+    "epoch": 1.0
+  },
+  "final_validation": {
+    "eval_loss": 0.792232871055603,
+    "eval_model_preparation_time": 0.0298,
+    "eval_runtime": 49.9127,
+    "eval_samples_per_second": 1.282,
+    "eval_steps_per_second": 1.282,
+    "eval_entropy": 0.894180511662853,
+    "eval_mean_token_accuracy": 0.7996507859788835,
+    "eval_num_tokens": 461062.0,
+    "epoch": 1.0
+  },
+  "peak_gpu_allocated_bytes": 42175661056,
+  "peak_gpu_reserved_bytes": 42911924224,
+  "base_repository": "unsloth/DeepSeek-R1-Distill-Llama-70B-bnb-4bit",
+  "base_revision": "32a33c0af1b24136fc477880e0ab4d7b67e6ddd0",
+  "validation_examples_scored": 64,
+  "clinical_validation_performed": false
+}
