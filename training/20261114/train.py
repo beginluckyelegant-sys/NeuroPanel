@@ -22,16 +22,17 @@ def main():
   with (ROOT/'data'/f'{split}.jsonl').open() as f:rows=[json.loads(line) for line in f]
   accepted=[];dropped=[]
   for r in rows:
-   ids=tok.apply_chat_template(r['prompt']+r['completion'],tokenize=True)
+   ids=tok.apply_chat_template(r['prompt']+r['completion'],tokenize=True,return_dict=False)
+   assert isinstance(ids,list) and all(isinstance(x,int) for x in ids)
    if len(ids)>c['max_length']:dropped.append({'sample_id':r['sample_id'],'tokens':len(ids)});continue
    accepted.append({'prompt':r['prompt'],'completion':r['completion']})
   length_audit[split]={'accepted':len(accepted),'excluded_over_length':dropped}
   if a.smoke:accepted=accepted[:4 if split=='train' else 2]
-  elif split=='validation':accepted=accepted[:64]
+  elif split=='validation':accepted=sorted(accepted,key=lambda r:hashlib.sha256(json.dumps(r,sort_keys=True,ensure_ascii=False).encode()).hexdigest())[:64]
   assert accepted;data[split]=Dataset.from_list(accepted)
  (ROOT/'audit/token_length_audit.json').write_text(json.dumps(length_audit,indent=2))
  output=ROOT/('smoke_output' if a.smoke else 'output');assert not (output/'adapter_final').exists(),'Refusing to overwrite a completed adapter'
- args=SFTConfig(output_dir=str(output),max_length=c['max_length'],per_device_train_batch_size=1,per_device_eval_batch_size=1,gradient_accumulation_steps=1 if a.smoke else c['gradient_accumulation_steps'],learning_rate=c['learning_rate'],num_train_epochs=c['epochs'],max_steps=2 if a.smoke else -1,bf16=True,gradient_checkpointing=True,gradient_checkpointing_kwargs={'use_reentrant':False},optim='adamw_torch',lr_scheduler_type='cosine',warmup_steps=0 if a.smoke else 10,max_grad_norm=1.0,logging_steps=1,logging_nan_inf_filter=False,eval_strategy='no',save_strategy='no' if a.smoke else 'steps',save_steps=50,save_total_limit=2,report_to='none',seed=c['seed'],packing=False,completion_only_loss=True,assistant_only_loss=False,prediction_loss_only=True,dataloader_pin_memory=False,model_init_kwargs={'device_map':{'':0},'dtype':torch.bfloat16,'attn_implementation':'sdpa','local_files_only':True},use_cache=False)
+ args=SFTConfig(output_dir=str(output),max_length=c['max_length'],per_device_train_batch_size=1,per_device_eval_batch_size=1,gradient_accumulation_steps=1 if a.smoke else c['gradient_accumulation_steps'],learning_rate=c['learning_rate'],num_train_epochs=c['epochs'],max_steps=2 if a.smoke else -1,bf16=True,gradient_checkpointing=True,gradient_checkpointing_kwargs={'use_reentrant':False},optim='adamw_torch',lr_scheduler_type='cosine',warmup_steps=0 if a.smoke else 10,max_grad_norm=1.0,logging_steps=1,logging_nan_inf_filter=False,eval_strategy='no',save_strategy='no' if a.smoke else 'steps',save_steps=10,save_total_limit=2,report_to='none',seed=c['seed'],packing=False,completion_only_loss=True,assistant_only_loss=False,prediction_loss_only=True,dataloader_pin_memory=False,model_init_kwargs={'device_map':{'':0},'dtype':torch.bfloat16,'attn_implementation':'sdpa','local_files_only':True},use_cache=False)
  peft=LoraConfig(r=c['lora_rank'],lora_alpha=c['lora_alpha'],lora_dropout=c['lora_dropout'],target_modules=c['target_modules'],bias='none',task_type='CAUSAL_LM')
  trainer=SFTTrainer(model=c['model_path'],args=args,train_dataset=data['train'],eval_dataset=data['validation'],processing_class=tok,peft_config=peft,callbacks=[CheckFinite()])
  # Check completion masking actually leaves supervised labels and masks prompt tokens.

@@ -10,7 +10,7 @@ The prepared split contains 4268 training and 476 validation examples from MedMC
 
 Near-verbatim public questions were grouped before splitting (character TF-IDF cosine >= 0.9). The local 360-case study corpus was checked by normalized exact matching and character similarity >= 0.8; no threshold matches were found. This check does not rule out semantic or cross-language overlap. Training/validation group overlap is zero. See data_preparation.json for hashes, methods and counts.
 
-Sequences exceeding 1,024 tokens are excluded rather than truncating away diagnostic information. Validation loss is measured on the first 64 retained validation examples (2 for the smoke test); it is a technical check, not diagnostic accuracy. The first smoke run takes two optimizer steps, and its adapter is not used to initialize the formal run.
+Sequences exceeding 1,024 tokens are excluded rather than truncating away diagnostic information. Validation loss is measured on 64 deterministically hash-selected retained validation examples (2 for the smoke test); it is a technical check, not diagnostic accuracy. The first smoke run takes two optimizer steps, and its adapter is not used to initialize the formal run.
 
 ## Training
 
