@@ -1,0 +1,18 @@
+{
+  "input_candidates": 4744,
+  "train": 4268,
+  "validation": 476,
+  "near_duplicate_pairs": 320,
+  "group_count": 4457,
+  "local_clinical_unique_cases_checked": 360,
+  "clinical_overlap_excluded": 0,
+  "highest_clinical_character_similarity": 0.3563816547393799,
+  "train_validation_group_overlap": 0,
+  "clinical_review": "public dataset labels; not independently clinician-adjudicated",
+  "third_batch_included": false,
+  "overlap_method": "normalized exact match plus char 3-5gram TF-IDF, clinical cosine>=0.8, public duplicate cosine>=0.9; semantic/bilingual leakage not ruled out",
+  "files": {
+    "train": "1531151f50164ec4d01c5c14a24444a0ca26bfa9241019fa38031d842d09ff39",
+    "validation": "7032f74fc4f014a0e834f330045bcedb36f0e23ae2a6d6b968f196ae34c0ae61"
+  }
+}

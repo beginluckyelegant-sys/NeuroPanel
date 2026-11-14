@@ -1,0 +1,15 @@
+{
+  "base_repository": "unsloth/DeepSeek-R1-Distill-Llama-70B-bnb-4bit",
+  "base_revision": "32a33c0af1b24136fc477880e0ab4d7b67e6ddd0",
+  "model_path": "/home/mxb/AI/models/DeepSeek-R1-Distill-Llama-70B-bnb-4bit",
+  "max_length": 1024,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+  "learning_rate": 0.0001,
+  "epochs": 1,
+  "gradient_accumulation_steps": 8,
+  "seed": 20261114,
+  "training_type": "new exploratory public-data QLoRA finetune"
+}

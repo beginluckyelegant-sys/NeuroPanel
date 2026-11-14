@@ -1,0 +1,9 @@
+{
+  "status": "preparing_verified_model_download",
+  "base_repository": "unsloth/DeepSeek-R1-Distill-Llama-70B-bnb-4bit",
+  "base_revision": "32a33c0af1b24136fc477880e0ab4d7b67e6ddd0",
+  "train_before_length_filter": 4268,
+  "validation_before_length_filter": 476,
+  "weights_available": false,
+  "clinical_validation_performed": false
+}
