@@ -1,6 +1,6 @@
 # NeuroPanel-70B QLoRA run — 2026-11-14
 
-Status: **smoke_training**. This is a new public-data adaptation run. Clinical validation has not been performed.
+Status: **formal_training**. This is a new public-data adaptation run. Clinical validation has not been performed.
 
 ## Model and data
 
