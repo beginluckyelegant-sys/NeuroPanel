@@ -1,0 +1,74 @@
+[
+  {
+    "repository": "FreedomIntelligence/medical-o1-verifiable-problem",
+    "revision": "46d5175eb74fdef3516d51d52e8c40db04bbdf35",
+    "file": "raw/verifiable.json",
+    "source_path": "medical_o1_verifiable_problem.json",
+    "source_url": "https://huggingface.co/datasets/FreedomIntelligence/medical-o1-verifiable-problem/resolve/46d5175eb74fdef3516d51d52e8c40db04bbdf35/medical_o1_verifiable_problem.json",
+    "download_url": "https://hf-mirror.com/datasets/FreedomIntelligence/medical-o1-verifiable-problem/resolve/46d5175eb74fdef3516d51d52e8c40db04bbdf35/medical_o1_verifiable_problem.json",
+    "sha256": "f5998431acb0eb35e9365f81b6e434d67c44392a5667280068c63ec072ba53cd",
+    "bytes": 12245698,
+    "verification": "Matched fixed-revision LFS sha256 and size from mirror metadata",
+    "declared_license": "Apache-2.0"
+  },
+  {
+    "repository": "FreedomIntelligence/medical-o1-reasoning-SFT",
+    "revision": "fc2c9e8a37b38f38da6d449564a8c350b244aef4",
+    "file": "raw/medical_o1_sft.json",
+    "source_path": "medical_o1_sft.json",
+    "source_url": "https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT/resolve/fc2c9e8a37b38f38da6d449564a8c350b244aef4/medical_o1_sft.json",
+    "download_url": "https://hf-mirror.com/datasets/FreedomIntelligence/medical-o1-reasoning-SFT/resolve/fc2c9e8a37b38f38da6d449564a8c350b244aef4/medical_o1_sft.json",
+    "sha256": "6a0289ebe0d07e3e77e8dbc81c31fcfc02cc99c7bca1602694cb2f76d505667e",
+    "bytes": 58177051,
+    "verification": "Matched fixed-revision LFS sha256 and size from mirror metadata",
+    "declared_license": "Apache-2.0"
+  },
+  {
+    "repository": "FreedomIntelligence/medical-o1-reasoning-SFT",
+    "revision": "fc2c9e8a37b38f38da6d449564a8c350b244aef4",
+    "file": "raw/medical_o1_sft_Chinese.json",
+    "source_path": "medical_o1_sft_Chinese.json",
+    "source_url": "https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT/resolve/fc2c9e8a37b38f38da6d449564a8c350b244aef4/medical_o1_sft_Chinese.json",
+    "download_url": "https://hf-mirror.com/datasets/FreedomIntelligence/medical-o1-reasoning-SFT/resolve/fc2c9e8a37b38f38da6d449564a8c350b244aef4/medical_o1_sft_Chinese.json",
+    "sha256": "e64b1426723b63899287236d20e9bbaec9f185e1ce4b24e9b61f610facb4369a",
+    "bytes": 50634791,
+    "verification": "Matched fixed-revision LFS sha256 and size from mirror metadata",
+    "declared_license": "Apache-2.0"
+  },
+  {
+    "repository": "openlifescienceai/medmcqa",
+    "revision": "91c6572c454088bf71b679ad90aa8dffcd0d5868",
+    "file": "raw/test-00000-of-00001.parquet",
+    "source_path": "data/test-00000-of-00001.parquet",
+    "source_url": "https://huggingface.co/datasets/openlifescienceai/medmcqa/resolve/91c6572c454088bf71b679ad90aa8dffcd0d5868/data/test-00000-of-00001.parquet",
+    "download_url": "https://hf-mirror.com/datasets/openlifescienceai/medmcqa/resolve/91c6572c454088bf71b679ad90aa8dffcd0d5868/data/test-00000-of-00001.parquet",
+    "sha256": "1d308841f0c82df363d3d638b33b69b8abd266b1e615ae5d2607dbb24c70beb1",
+    "bytes": 936358,
+    "verification": "Matched fixed-revision LFS sha256 and size from mirror metadata",
+    "declared_license": "Apache-2.0"
+  },
+  {
+    "repository": "openlifescienceai/medmcqa",
+    "revision": "91c6572c454088bf71b679ad90aa8dffcd0d5868",
+    "file": "raw/train-00000-of-00001.parquet",
+    "source_path": "data/train-00000-of-00001.parquet",
+    "source_url": "https://huggingface.co/datasets/openlifescienceai/medmcqa/resolve/91c6572c454088bf71b679ad90aa8dffcd0d5868/data/train-00000-of-00001.parquet",
+    "download_url": "https://hf-mirror.com/datasets/openlifescienceai/medmcqa/resolve/91c6572c454088bf71b679ad90aa8dffcd0d5868/data/train-00000-of-00001.parquet",
+    "sha256": "b119434ba551517a6ec0ba1f7e0b4c029165ed284a4704f262ce37c791c493c5",
+    "bytes": 85899025,
+    "verification": "Matched fixed-revision LFS sha256 and size from mirror metadata",
+    "declared_license": "Apache-2.0"
+  },
+  {
+    "repository": "openlifescienceai/medmcqa",
+    "revision": "91c6572c454088bf71b679ad90aa8dffcd0d5868",
+    "file": "raw/validation-00000-of-00001.parquet",
+    "source_path": "data/validation-00000-of-00001.parquet",
+    "source_url": "https://huggingface.co/datasets/openlifescienceai/medmcqa/resolve/91c6572c454088bf71b679ad90aa8dffcd0d5868/data/validation-00000-of-00001.parquet",
+    "download_url": "https://hf-mirror.com/datasets/openlifescienceai/medmcqa/resolve/91c6572c454088bf71b679ad90aa8dffcd0d5868/data/validation-00000-of-00001.parquet",
+    "sha256": "b768a1ea34afc9f80d3106d9b21f80fa8a00ec450a1f6cd641af72ca9e591021",
+    "bytes": 1476104,
+    "verification": "Matched fixed-revision LFS sha256 and size from mirror metadata",
+    "declared_license": "Apache-2.0"
+  }
+]
